@@ -4,12 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
   hamburguesa.addEventListener('click', () => {
     hamburguesa.classList.toggle('open');
     nav.classList.toggle('open');
+    const isExpanded = hamburguesa.getAttribute('aria-expanded') === 'true';
+    hamburguesa.setAttribute('aria-expanded', !isExpanded);
   });
   // Opcional: cerrar menú al hacer click en un enlace
   nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       hamburguesa.classList.remove('open');
       nav.classList.remove('open');
+      hamburguesa.setAttribute('aria-expanded', 'false');
     });
   });
 
