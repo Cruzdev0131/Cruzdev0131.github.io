@@ -171,7 +171,8 @@ h3 {
   cursor: pointer;
 }
 
-.proyecto-card:hover {
+.proyecto-card:hover,
+.proyecto-card.active {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
@@ -224,13 +225,17 @@ footer {
 }
 
 /* Animaciones */
-.slide-in-left {
-  animation: slideInLeft 1s ease-out forwards;
-  opacity: 0;
+.animated {
+  opacity: 0; /* Oculto por defecto */
 }
-.slide-in-right {
+
+/* Se aplica la animación cuando el elemento es visible */
+.animated.visible.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animated.visible.slide-in-right {
   animation: slideInRight 1s ease-out forwards;
-  opacity: 0;
 }
 
 @keyframes slideInLeft {
