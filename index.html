@@ -1,12 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CruzDev</title>
+  
+  <meta name="description" content="Portafolio de Adolfo Cruz, Desarrollador Full Stack. Proyectos en C++, Web, y soluciones tecnológicas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      <link rel="icon" href="images/favicon_io(1)/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon_io(1)/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -18,7 +24,6 @@
     <span></span>
     <span></span>
   </button>
-            <!-- ...existing code... -->
       <nav id="nav">
         <a href="#CV">CV</a>
         <a href="#aboutme">About me</a>
@@ -26,86 +31,88 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact Me</a>
       </nav>
-      <!-- ...existing code... -->
     </div>
   </header>
+  
   <main>
 
-        <section id="hero" class="animated">
-    <div class="hero-contenedor">
-      <div class="hero-texto">
-        <h2>Adolfo Cruz</h2>
+    <section id="hero" class="animated">
+      <div class="hero-contenedor">
+        <div class="hero-texto">
+          <h2>Adolfo Cruz</h2>
+          <p>
+            I am a full stack developer passionate about programming and creativity.<br>
+            I am a university student.<br>
+            I am a determined person.
+          </p>
+        </div>
+        <div class="hero-foto">
+          <img
+            src="images/yo2026.jpeg"
+            alt="Adolfo Cruz - Full Stack Developer"
+            width="320"
+            height="320"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="CV" class="animated">
+      <h3>CV</h3>
+      <a href="AdolfoEmilianoCruzVelazquezResume.pdf" download="AdolfoEmilianoCruzVelazquezResume.pdf" class="btn-cv">Download CV</a>
+    </section>
+
+    <section id="aboutme" class="animated">
+      <h3>About Me</h3>
+      <div class="aboutme-content" style="max-width: 800px; margin: 0 auto; text-align: left;">
         <p>
-          I am a full stack developer passionate about programming and creativity.<br>
-          I am a university student.<br>
-          I am a determined person.
+          I'm a third-semester <strong>Computer Systems Engineering student</strong> at the National Technological Institute of Mexico, Morelia Campus. In high school, I graduated as a Programming Technician, which combined with my current studies, has given me <strong>four years of programming experience</strong>.
+        </p>
+        <br>
+        <p>
+          Over the past year, I've been using <strong>GNU/Linux</strong> as my primary desktop environment to enhance my programming skills and continuously explore new technologies. Throughout my academic journey, I've developed strong <strong>teamwork and leadership abilities</strong>, contributing as much as possible in areas where I have less experience while embracing each challenge as a learning opportunity.
+        </p>
+        <br>
+        <p>
+          I approach challenges with a positive and level-headed mindset, always striving to find the best possible solution. This has led me to participate in <strong>competitive programming</strong>, take on leadership roles in clubs, and manage project areas.
         </p>
       </div>
-      <div class="hero-foto">
-       <img
-  src="images/yo2026.jpeg"
-  alt="Adolfo Cruz - Full Stack Developer"
-  width="320"
-  height="320"
-  decoding="async"
-  fetchpriority="high"
-/>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="proyectos-grid">
+        <div class="proyecto-card animated">
+          <h4>Entry Control System for My High School</h4>
+          <p>
+            <strong>Database Area Leader</strong><br><br>
+            I collaborated with a team to develop a system for managing student entry and exit at my high school. As the leader of the database area, I was responsible for designing, implementing, and maintaining the data model, ensuring the system's integrity, efficiency, and scalability.
+          </p>
+        </div>
+        
+        <div class="proyecto-card animated">
+          <h4>Pharmaceutical Control System for Franchises</h4>
+          <p>
+            <strong>Full Stack Developer</strong><br><br>
+            I contributed to the development of a comprehensive control system for pharmaceutical franchises, focused on managing key processes such as purchasing, sales, invoicing, and inventory. I worked as a full stack developer, handling both the backend and frontend of the project.
+          </p>
+        </div>
+
+        <div class="proyecto-card animated">
+          <h4>Website for My High School's Club</h4>
+          <p>
+            <strong>Full Stack Developer</strong><br><br>
+            I developed and managed the club’s website, aimed at sharing advanced programming knowledge and showcasing the team’s achievements in competitions. I handled both frontend and backend development for the project.
+            <br><br>
+            <a href="https://algoritmiaitm.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+          </p> 
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-        <section id="CV" class="animated">
-    <h3>CV</h3>
-    <a href="AdolfoEmilianoCruzVelazquezResume.pdf" download="AdolfoEmilianoCruzVelazquezResume.pdf" class="btn-cv">Download CV</a>
-  </section>
-
-
-   <section id="aboutme" class="animated">
-    <h3>About Me</h3>
-    <p>I'm a third-semester Computer Systems Engineering student at the National Technological Institute of Mexico, Morelia Campus. In high school, I graduated as a Programming Technician, which combined with my current studies, has given me four years of programming experience. Over the past year, I've been using GNU/Linux as my primary desktop environment to enhance my programming skills and continuously explore new technologies. Throughout my academic journey, I've developed strong teamwork and leadership abilities, contributing as much as possible in areas where I have less experience while embracing each challenge as a learning opportunity. On the other hand, when I'm more knowledgeable about a topic I naturally take on a leadership role, guiding my team and driving progress. I approach challenges with a positive and level-headed mindset, always striving to find the best possible solution, which has led me to participate in competitive programming, take on leadership roles in clubs, and manage project areas. These experiences have further shaped my passion for coding and reinforced my commitment to pursuing a career in computer science.</p>
-  </section>
-
-   <section id="projects">
-    <h3>Projects</h3>
-    <div class="proyectos-grid">
-      <div class="proyecto-card animated">
-        <h4>Entry Control System for My High School</h4>
-        <p>
-Database Area Leader
-
-I collaborated with a team to develop a system for managing student entry and exit at my high school. As the leader of the database area, I was responsible for designing, implementing, and maintaining the data model, ensuring the system's integrity, efficiency, and scalability.</p>
-      </div>
-      <div class="proyecto-card animated">
-        <h4>Pharmaceutical Control System for Franchises Focused on Purchase, Sales, Invoicing, and Storage Management</h4>
-<p>
-Full Stack Developer
-
-I contributed to the development of a comprehensive control system for pharmaceutical franchises, focused on managing key processes such as purchasing, sales, invoicing, and inventory. I worked as a full stack developer, handling both the backend and frontend of the project.</p>
-      </div>
-
-
-
-      <div class="proyecto-card animated">
-        <h4>Website for My High School's Club Dedicated to Sharing Complex Programming Topics and Team Achievements</h4>
-<p>
-Full Stack Developer
-
-I developed and managed the club’s website, aimed at sharing advanced programming knowledge and showcasing the team’s achievements in competitions. I handled both frontend and backend development for the project.
-<br> <a href="https://algoritmiaitm.vercel.app/">Click here</a>
-</p> 
-
-      </div>
-
-
-
-
-
-    </div>
-  </section>
-
-
-
-        <section id="skills">
+    <section id="skills">
       <h3 class="skills-title">Technical Skills</h3>
       <ul class="skills-list">
         <li>
@@ -118,7 +125,30 @@ I developed and managed the club’s website, aimed at sharing advanced programm
         </li>
       </ul>
     </section>
-    <!-- ...existing code... -->
+
+    <section id="contacto-form" class="animated">
+      <h3>Get in Touch</h3>
+      <p style="text-align: center; margin-bottom: 2rem;">Have a project in mind or want to collaborate? Send me a message!</p>
+      
+      <form action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+        </div>
+        <button type="submit" class="btn-cv submit-btn">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
   <footer id="contact">
     <div class="footer-social">
       <a href="https://github.com/Cruzdev0131" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
@@ -130,8 +160,6 @@ I developed and managed the club’s website, aimed at sharing advanced programm
     </div>
   </footer>
 
-
-  <!-- ...existing code... -->
-<script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
