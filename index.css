@@ -521,14 +521,20 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Mejora visual del menú desplegable */
+    border-bottom: 2px solid var(--color-acento);
   }
 
   nav.open {
     display: flex;
   }
 
-  nav a {
+  nav a,
+  #btn-idioma {
     margin: 0.8rem 0;
+    font-size: 1.1rem;
+    /* Botones más grandes para dedos */
   }
 
   /* Ajustes de layout */
@@ -544,6 +550,8 @@ footer {
   .hero-foto {
     width: 260px;
     height: 260px;
+    margin-top: 2rem;
+    /* Separación del texto arriba */
   }
 
   .hero-foto img {
@@ -554,6 +562,35 @@ footer {
 
   section {
     padding: 3rem 1rem;
+  }
+
+  /* Ajustes responsivos para la línea de tiempo (Experiencia) */
+  .experience-timeline::before {
+    left: 10px;
+    /* Acercar la línea de tiempo más a la izquierda */
+  }
+
+  .experience-dot {
+    left: 2px;
+    /* Alinear el punto */
+  }
+
+  .experience-item {
+    padding-left: 35px;
+    /* Reducir padding izquierdo */
+  }
+
+  .experience-content {
+    padding: 1rem;
+    /* Reducir padding de la tarjeta */
+  }
+
+  .experience-content h4 {
+    font-size: 1.15rem;
+  }
+
+  .experience-content ul {
+    padding-left: 0.5rem;
   }
 }
 
