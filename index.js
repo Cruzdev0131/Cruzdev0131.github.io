@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --- Tarjetas de Proyectos (Mejorado) --- */
   document.querySelectorAll('.proyecto-card').forEach(card => {
     // 1. Funcionalidad de enlace: clic en la tarjeta = abrir enlace
-    card.addEventListener('click', function(e) {
+    card.addEventListener('click', function (e) {
       // Si el usuario hizo clic directamente en el texto del enlace, dejamos que el HTML actúe normal
       if (e.target.tagName === 'A') return;
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 2. Funcionalidad visual: efectos 'active' para móviles/táctil
-    card.addEventListener('click', function() {
+    card.addEventListener('click', function () {
       if (this.classList.contains('active')) {
         this.classList.remove('active');
       } else {
@@ -65,10 +65,42 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         el.classList.add('slide-in-right');
       }
-    } else { 
+    } else {
       // Para otros elementos (como el formulario o tarjetas) usa slide-in-right por defecto
       el.classList.add('slide-in-right');
     }
     observer.observe(el);
   });
+
+  /* --- Typewriter Effect --- */
+  const textArray = ["Full Stack Developer", "Computer Systems Student", "Competitive Programmer"];
+  let textIndex = 0;
+  let charIndex = 0;
+  const typewriterElement = document.getElementById("typewriter-text");
+
+  if (typewriterElement) {
+    function type() {
+      if (charIndex < textArray[textIndex].length) {
+        typewriterElement.textContent += textArray[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 2000); // Wait before erasing
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typewriterElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 50);
+      } else {
+        textIndex = (textIndex + 1) % textArray.length;
+        setTimeout(type, 500); // Wait before typing next word
+      }
+    }
+
+    // Initial delay
+    setTimeout(type, 1000);
+  }
 });
