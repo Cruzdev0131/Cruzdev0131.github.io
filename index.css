@@ -245,6 +245,97 @@ h3 {
   font-weight: bold;
 }
 
+/* --- Sección Experiencia Laboral --- */
+.experience-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 2px;
+  background: var(--color-acento);
+  opacity: 0.5;
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 50px;
+}
+
+.experience-dot {
+  position: absolute;
+  left: 12px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-primario);
+  border: 3px solid var(--color-acento);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(233, 69, 96, 0.4);
+  z-index: 1;
+}
+
+.experience-content {
+  background-color: rgba(22, 33, 62, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.experience-content:hover {
+  transform: translateX(5px);
+  border-color: rgba(233, 69, 96, 0.3);
+  box-shadow: 0 6px 15px rgba(233, 69, 96, 0.15);
+}
+
+.experience-content h4 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  /* Override the gradient trick for better readability */
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+.experience-content h5 {
+  margin: 0.5rem 0 1rem;
+  color: #aaa;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.experience-content ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  color: var(--color-texto);
+}
+
+.experience-content li {
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+  position: relative;
+}
+
+.experience-content li::before {
+  content: '▸';
+  position: absolute;
+  left: -1.2rem;
+  color: var(--color-acento);
+}
+
 /* Sección Skills */
 .skills-grid {
   display: grid;
@@ -474,5 +565,30 @@ footer {
   .hero-foto {
     width: 220px;
     height: 220px;
+  }
+}
+
+/* --- Mejoras de Accesibilidad (A11y) --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

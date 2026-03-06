@@ -103,4 +103,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial delay
     setTimeout(type, 1000);
   }
+
+  /* --- Sistema de Idioma (i18n) --- */
+  const btnIdioma = document.getElementById('btn-idioma');
+
+  if (btnIdioma) {
+    let idiomaActual = localStorage.getItem('idioma') || 'en';
+
+    // Función para actualizar textos en la pantalla
+    // Ahora permite innerHTML de manera segura para mantener etiquetas <strong> y <li> dentro de atributos data-* que los contengan
+    const actualizarTextos = (idioma) => {
+      document.querySelectorAll('[data-es]').forEach(elemento => {
+        // Usamos innerHTML si el data attribute contiene HTML como <li>, sino usamos textContent por seguridad.
+        const contenido = elemento.getAttribute(`data-${idioma}`);
+        if (contenido.includes('<li>') || contenido.includes('<strong>')) {
+          elemento.innerHTML = contenido;
+        } else {
+          elemento.textContent = contenido;
+        }
+      });
+      // Cambiar el texto del botón al idioma contrario (Muestra "ES" si el actual es "en")
+      btnIdioma.textContent = idioma === 'en' ? 'ES' : 'EN';
+    };
+
+    // Aplicar idioma guardado al cargar
+    actualizarTextos(idiomaActual);
+
+    // Evento al hacer clic en el botón
+    btnIdioma.addEventListener('click', () => {
+      idiomaActual = idiomaActual === 'en' ? 'es' : 'en';
+      localStorage.setItem('idioma', idiomaActual);
+      actualizarTextos(idiomaActual);
+    });
+  }
 });

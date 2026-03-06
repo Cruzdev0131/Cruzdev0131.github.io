@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CruzDev</title>
-  
-  <meta name="description" content="Portfolio of Adolfo Cruz, Full Stack Developer. Projects in C++, Web, and tech solutions.">
+
+  <meta name="description"
+    content="Portfolio of Adolfo Cruz, Full Stack Developer. Projects in C++, Web, and tech solutions.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,26 +16,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="images/favicon_io(1)/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
 </head>
+
 <body>
-   <header>
+  <header>
     <div class="header-contenido">
       <h1>CruzDev</h1>
-       <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav id="nav">
         <a href="#CV">CV</a>
-        <a href="#aboutme">About me</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact Me</a>
+        <a href="#aboutme" data-es="Sobre mí" data-en="About me">About me</a>
+        <a href="#experience" data-es="Experiencia" data-en="Experience">Experience</a>
+        <a href="#projects" data-es="Proyectos" data-en="Projects">Projects</a>
+        <a href="#skills" data-es="Habilidades" data-en="Skills">Skills</a>
+        <a href="#contact" data-es="Contacto" data-en="Contact Me">Contact Me</a>
+        <button id="btn-idioma"
+          style="background:none; border:none; color:var(--color-acento); font-weight:bold; cursor:pointer; margin-left:1rem; font-family:var(--fuente-principal);">ES</button>
       </nav>
     </div>
   </header>
-  
+
   <main>
 
     <section id="hero" class="animated">
@@ -41,72 +48,131 @@
         <div class="hero-texto">
           <h2>Adolfo Cruz</h2>
           <p>
-            I am a <span id="typewriter-text" style="color: var(--color-acento); font-weight: bold;"></span><span class="cursor">|</span><br>
-            passionate about programming and creativity.<br>
-            I am a determined person.
+            <span data-es="Soy un" data-en="I am a">I am a</span> <span class="sr-only">Full Stack Developer y
+              estudiante.</span>
+            <span id="typewriter-text" style="color: var(--color-acento); font-weight: bold;"
+              aria-hidden="true"></span><span class="cursor" aria-hidden="true">|</span><br>
+            <span data-es="apasionado por la programación y la creatividad."
+              data-en="passionate about programming and creativity.">passionate about programming and
+              creativity.</span><br>
+            <span data-es="Soy una persona determinada." data-en="I am a determined person.">I am a determined
+              person.</span>
           </p>
         </div>
         <div class="hero-foto">
-          <img
-            src="images/yo2026.jpeg"
-            alt="Adolfo Cruz - Full Stack Developer"
-            width="320"
-            height="320"
-            decoding="async"
-            fetchpriority="high"
-          />
+          <img src="images/yo2026.jpeg" alt="Adolfo Cruz - Full Stack Developer" width="320" height="320"
+            decoding="async" fetchpriority="high" />
         </div>
       </div>
     </section>
 
     <section id="CV" class="animated">
       <h3>CV</h3>
-      <a href="AdolfoEmilianoCruzVelazquezResume.pdf" download="AdolfoEmilianoCruzVelazquezResume.pdf" class="btn-cv">Download CV</a>
+      <a href="AdolfoEmilianoCruzVelazquezResume.pdf" download="AdolfoEmilianoCruzVelazquezResume.pdf"
+        class="btn-cv">Download CV</a>
     </section>
 
     <section id="aboutme" class="animated">
-      <h3>About Me</h3>
+      <h3 data-es="Sobre Mí" data-en="About Me">About Me</h3>
       <div class="aboutme-content" style="max-width: 800px; margin: 0 auto; text-align: left;">
         <p>
-          I'm a third-semester <strong>Computer Systems Engineering student</strong> at the National Technological Institute of Mexico, Morelia Campus. In high school, I graduated as a Programming Technician, which combined with my current studies, has given me <strong>four years of programming experience</strong>.
+          I'm a third-semester <strong>Computer Systems Engineering student</strong> at the National Technological
+          Institute of Mexico, Morelia Campus. In high school, I graduated as a Programming Technician, which combined
+          with my current studies, has given me <strong>four years of programming experience</strong>.
         </p>
         <br>
         <p>
-          Over the past year, I've been using <strong>GNU/Linux</strong> as my primary desktop environment to enhance my programming skills and continuously explore new technologies. Throughout my academic journey, I've developed strong <strong>teamwork and leadership abilities</strong>, contributing as much as possible in areas where I have less experience while embracing each challenge as a learning opportunity.
+          Over the past year, I've been using <strong>GNU/Linux</strong> as my primary desktop environment to enhance my
+          programming skills and continuously explore new technologies. Throughout my academic journey, I've developed
+          strong <strong>teamwork and leadership abilities</strong>, contributing as much as possible in areas where I
+          have less experience while embracing each challenge as a learning opportunity.
         </p>
         <br>
         <p>
-          I approach challenges with a positive and level-headed mindset, always striving to find the best possible solution. This has led me to participate in <strong>competitive programming</strong>, take on leadership roles in clubs, and manage project areas.
+          I approach challenges with a positive and level-headed mindset, always striving to find the best possible
+          solution. This has led me to participate in <strong>competitive programming</strong>, take on leadership roles
+          in clubs, and manage project areas.
         </p>
       </div>
     </section>
 
+    <section id="experience" class="animated">
+      <h3 data-es="Experiencia Profesional" data-en="Professional Experience">Professional Experience</h3>
+      <div class="experience-timeline">
+        <div class="experience-item">
+          <div class="experience-dot"></div>
+          <div class="experience-content">
+            <h4 data-es="Desarrollador Web Intern" data-en="Web Developer Intern">Web Developer Intern</h4>
+            <h5 data-es="B2Park | Sep 2025 – Presente" data-en="B2Park | Sep 2025 – Present">B2Park | Sep 2025 – Present
+            </h5>
+            <ul data-es="
+              <li>Desarrollo de interfaces de usuario funcionales utilizando <strong>React + TypeScript</strong>, aplicando principios de arquitectura limpia y componentes reutilizables.</li>
+              <li>Integración del frontend con APIs y servicios backend (MongoDB), con manejo robusto de estados (carga, errores).</li>
+              <li>Colaboración activa usando prácticas de Git: ramas funcionales, commits descriptivos, resolución de conflictos y Code Reviews.</li>
+            " data-en="
+              <li>Built and shipped UI features using <strong>React + TypeScript</strong>, applying clean architecture principles and reusable components.</li>
+              <li>Integrated the frontend with APIs/services (backed by MongoDB), implementing reliable state handling.</li>
+              <li>Followed strong Git practices: feature/fix branches, meaningful commits, conflict resolution and pull requests with reviews.</li>
+            ">
+              <li>Built and shipped UI features using <strong>React + TypeScript</strong>, applying clean architecture
+                principles and reusable components.</li>
+              <li>Integrated the frontend with APIs/services (backed by MongoDB), implementing reliable state handling.
+              </li>
+              <li>Followed strong Git practices: feature/fix branches, meaningful commits, conflict resolution and pull
+                requests with reviews.</li>
+            </ul>
+            <div class="tech-badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span
+                style="background: rgba(49, 120, 198, 0.2); color: #61dafb; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">React</span>
+              <span
+                style="background: rgba(49, 120, 198, 0.2); color: #3178c6; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">TypeScript</span>
+              <span
+                style="background: rgba(71, 162, 72, 0.2); color: #47a248; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">MongoDB</span>
+              <span
+                style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">REST
+                APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="projects">
-      <h3>Projects</h3>
+      <h3 data-es="Proyectos" data-en="Projects">Projects</h3>
       <div class="proyectos-grid">
         <div class="proyecto-card animated">
           <h4>Entry Control System for My High School</h4>
           <p>
             <strong>Database Area Leader</strong><br><br>
-            I collaborated with a team to develop a system for managing student entry and exit at my high school. As the leader of the database area, I was responsible for designing, implementing, and maintaining the data model, ensuring the system's integrity, efficiency, and scalability.
+            I collaborated with a team to develop a system for managing student entry and exit at my high school. As the
+            leader of the database area, I was responsible for designing, implementing, and maintaining the data model,
+            ensuring the system's integrity, efficiency, and scalability.
           </p>
           <div class="tech-badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <span style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">SQL</span>
-            <span style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">C++</span>
+            <span
+              style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">SQL</span>
+            <span
+              style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">C++</span>
           </div>
         </div>
-        
+
         <div class="proyecto-card animated">
           <h4>Pharmaceutical Control System for Franchises</h4>
           <p>
             <strong>Full Stack Developer</strong><br><br>
-            I contributed to the development of a comprehensive control system for pharmaceutical franchises, focused on managing key processes such as purchasing, sales, invoicing, and inventory. I worked as a full stack developer, handling both the backend and frontend of the project.
+            I contributed to the development of a comprehensive control system for pharmaceutical franchises, focused on
+            managing key processes such as purchasing, sales, invoicing, and inventory. I worked as a full stack
+            developer, handling both the backend and frontend of the project.
           </p>
           <div class="tech-badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <span style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">HTML/CSS</span>
-            <span style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">JavaScript</span>
-            <span style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">PHP</span>
-            <span style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">SQL</span>
+            <span
+              style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">HTML/CSS</span>
+            <span
+              style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">JavaScript</span>
+            <span
+              style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">PHP</span>
+            <span
+              style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">SQL</span>
           </div>
         </div>
 
@@ -114,52 +180,55 @@
           <h4>Website for My High School's Club</h4>
           <p>
             <strong>Full Stack Developer</strong><br><br>
-            I developed and managed the club’s website, aimed at sharing advanced programming knowledge and showcasing the team’s achievements in competitions. I handled both frontend and backend development for the project.
+            I developed and managed the club’s website, aimed at sharing advanced programming knowledge and showcasing
+            the team’s achievements in competitions. I handled both frontend and backend development for the project.
             <br><br>
             <a href="https://algoritmiaitm.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Website</a>
           </p>
           <div class="tech-badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-             <span style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">HTML/CSS</span>
-             <span style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">JavaScript</span>
+            <span
+              style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">HTML/CSS</span>
+            <span
+              style="background: rgba(233, 69, 96, 0.2); color: #ff758c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;">JavaScript</span>
           </div>
         </div>
       </div>
     </section>
 
     <section id="skills">
-      <h3 class="skills-title">Technical Skills</h3>
+      <h3 class="skills-title" data-es="Habilidades Técnicas" data-en="Technical Skills">Technical Skills</h3>
       <div class="skills-grid">
+        <div class="skill-item">
+          <i class="fab fa-react" style="color: #61dafb;"></i>
+          <p>React</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-code" style="color: #3178c6;"></i>
+          <p>TypeScript</p>
+        </div>
         <div class="skill-item">
           <i class="fab fa-js" style="color: #f7df1e;"></i>
           <p>JavaScript</p>
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-python" style="color: #306998;"></i>
-          <p>Python</p>
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-java" style="color: #b07219;"></i>
-          <p>Java</p>
         </div>
         <div class="skill-item">
           <i class="fas fa-file-code" style="color: #00599C;"></i>
           <p>C++</p>
         </div>
         <div class="skill-item">
-          <i class="fab fa-php" style="color: #777bb4;"></i>
-          <p>PHP</p>
+          <i class="fas fa-database" style="color: #47a248;"></i>
+          <p>MongoDB</p>
         </div>
         <div class="skill-item">
-          <i class="fas fa-database" style="color: #e38c00;"></i>
-          <p>SQL</p>
+          <i class="fas fa-server" style="color: #e38c00;"></i>
+          <p>SQL / REST APIs</p>
         </div>
         <div class="skill-item">
-          <i class="fab fa-html5" style="color: #e34f26;"></i>
-          <p>HTML/CSS</p>
+          <i class="fab fa-python" style="color: #306998;"></i>
+          <p>Python</p>
         </div>
         <div class="skill-item">
           <i class="fab fa-git-alt" style="color: #f05032;"></i>
-          <p>Git</p>
+          <p>Git / GitHub</p>
         </div>
         <div class="skill-item">
           <i class="fab fa-linux" style="color: #fdf6e3;"></i>
@@ -169,9 +238,10 @@
     </section>
 
     <section id="contacto-form" class="animated">
-      <h3>Get in Touch</h3>
-      <p style="text-align: center; margin-bottom: 2rem;">Have a project in mind or want to collaborate? Send me a message!</p>
-      
+      <h3 data-es="Ponte en contacto" data-en="Get in Touch">Get in Touch</h3>
+      <p style="text-align: center; margin-bottom: 2rem;">Have a project in mind or want to collaborate? Send me a
+        message!</p>
+
       <form action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST" class="contact-form">
         <div class="form-group">
           <label for="name">Name</label>
@@ -193,15 +263,18 @@
 
   <footer id="contact">
     <div class="footer-social">
-      <a href="https://github.com/Cruzdev0131" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/adolfo-emiliano-cruz-velazquez-455a982b8/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:adolfoemilianocruzs@gmail.com" title="Email" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/Cruzdev0131" target="_blank" rel="noopener noreferrer" title="GitHub"><i
+          class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/adolfo-emiliano-cruz-velazquez-455a982b8/" target="_blank"
+        rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:adolfoemilianocruzs@gmail.com" title="Email" rel="noopener noreferrer"><i
+          class="fas fa-envelope"></i></a>
     </div>
     <div class="footer-copy">
       © 2026 CruzDev | Adolfo Emiliano Cruz Velazquez.
     </div>
   </footer>
 
-  <script src="index.js"></script>
 </body>
+
 </html>
